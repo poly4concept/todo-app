@@ -1,6 +1,5 @@
-
 {
-  "homepage": "https://poly4concept.github.io/todo-list-app",
+  "homepage": "https://poly4concept.github.io/todo-app",
   "name": "moz-todo-react",
   "version": "0.1.0",
   "private": true,
@@ -26,7 +25,7 @@
     "extends": [
       "react-app",
       "react-app/jest"
-    ]
+      ]
   },
   "browserslist": {
     "production": [
