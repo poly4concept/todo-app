@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Form from "./Components/form";
 import Todo from "./Components/todos";
-import { nanoid } from "nanoid";
+import { nanoid } from "nanoid" ;
 import './index.css';
 
 class App extends Component {
@@ -24,6 +24,10 @@ class App extends Component {
             },
         ]
     }
+    
+
+//HeadingText
+    
 //Toggle Complete
     markCompleted = (id) => {
         this.setState({todos: this.state.todos.map(todo => {
