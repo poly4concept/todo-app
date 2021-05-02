@@ -22,7 +22,8 @@ class App extends Component {
                 title: 'Coding',
                 completed: true
             },
-        ]
+        ],
+        count: 3
     }
     
 
@@ -40,6 +41,10 @@ class App extends Component {
 //Delete Todo Items
     delTodo = (id) => {
         this.setState({ todos: [...this.state.todos.filter(todo => todo.id !== id)] })
+        let newCount = this.state.count - 1
+        this.setState({
+        count: newCount
+    })
     }
 //Add Todo Items
     Form = (title) => {
@@ -49,12 +54,16 @@ class App extends Component {
             completed: false
         }
         this.setState({ todos: [...this.state.todos, newTodo] });
+        let newCount = this.state.count + 1
+        this.setState({
+        count: newCount
+    })
     }
     render(){
         return (
             <div className="todoapp">
                 <Form Form={this.Form}/>
-                <h3>Tasks - 3</h3>
+                <h3>Tasks - {this.state.count}</h3>
                 <Todo  todos={this.state.todos} markCompleted={this.markCompleted} delTodo={this.delTodo} />
             </div>
         )
